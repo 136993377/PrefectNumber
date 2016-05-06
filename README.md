@@ -23,25 +23,33 @@ If you compose a phone number as "13655558888" np.js can auto format to "135 666
 ## How to use it?   这东西，咋个用？  
 
 手机号、座机号、400电话、800电话：  
-` <pn-phone-zh-cn>13566668888</pn-phone-zh-cn> `
+代码：` <pn-phone-zh-cn>13566668888</pn-phone-zh-cn> `  
+效果：135 6666 8888
 
 身份证号码：  
-` <pn-identification>510722198907290011</pn-identification> `
+代码：` <pn-identification>510722195808290011</pn-identification> `  
+效果：510 722 1958 0829 0011  
 
 人民币：  
-` <pn-rmb>22365.45</pn-rmb> `
+代码：` <pn-rmb>22365.45</pn-rmb> `  
+效果：￥ 22,365.45  
+
 
 美元：  
-` <pn-dollar>16546.56</pn-dollar> `
+代码：` <pn-dollar>16546.56</pn-dollar> `  
+效果：$ 16,546.56  
 
 数量：  
-` <pn-math>129481</pn-math> `
+代码：` <pn-math>3129481</pn-math> `  
+效果：3,129,481  
 
 邮编：  
-` <pn-zip>621101</pn-zip> `
+代码：` <pn-zip>621101</pn-zip> `  
+效果：62 11 01  
 
 默认：  
-` <pn>549866574321646216546</pn> `
+代码：` <pn>549866574321646216546</pn> `  
+效果：549 866 574 321 646 216 546  
 
 ## 需要注意的问题！
 np.js 只针对数字在 web 页面中的数字显示效果，在不影响原内容的情况下增强可读性，默认将数字作为字符串进行处理。不适用涉及运算对精度有严格要求的场景。
