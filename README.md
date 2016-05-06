@@ -20,7 +20,7 @@ If you compose a phone number as "13655558888" np.js can auto format to "135 666
 - 人民币；
 - 美元；
 
-## How to use it   这东西，咋个用？
+## How to use it?   这东西，咋个用？
 
 ## 需要注意的问题！
 np.js 只针对数字在 web 页面中的数字显示效果，在不影响原内容的情况下增强可读性，默认将数字作为字符串进行处理。不适用涉及运算对精度有严格要求的场景。
