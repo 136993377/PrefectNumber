@@ -22,25 +22,25 @@ If you compose a phone number as "13655558888" np.js can auto format to "135 666
 
 ## How to use it?   这东西，咋个用？  
 
-手机号、座机号、400电话、800电话：
-` <pn-phone-zh-cn>13566668888</pn-phone-zh-cn>
+手机号、座机号、400电话、800电话：  
+` <pn-phone-zh-cn>13566668888</pn-phone-zh-cn> `
 
-身份证号码：
+身份证号码：  
 ` <pn-identification>510722198907290011</pn-identification> `
 
-人民币：
+人民币：  
 ` <pn-rmb>22365.45</pn-rmb> `
 
-美元：
+美元：  
 ` <pn-dollar>16546.56</pn-dollar> `
 
-数量：
+数量：  
 ` <pn-math>129481</pn-math> `
 
-邮编：
+邮编：  
 ` <pn-zip>621101</pn-zip> `
 
-默认：
+默认：  
 ` <pn>549866574321646216546</pn> `
 
 ## 需要注意的问题！
