@@ -26,22 +26,22 @@ If you compose a phone number as "13655558888" np.js can auto format to "135 666
 ` <pn-phone-zh-cn>13566668888</pn-phone-zh-cn>
 
 身份证号码：
-` <pn-identification>510722198907290011</pn-identification>
+` <pn-identification>510722198907290011</pn-identification> `
 
 人民币：
-` <pn-rmb>22365.45</pn-rmb>
+` <pn-rmb>22365.45</pn-rmb> `
 
 美元：
-` <pn-dollar>16546.56</pn-dollar>
+` <pn-dollar>16546.56</pn-dollar> `
 
 数量：
-` <pn-math>129481</pn-math>
+` <pn-math>129481</pn-math> `
 
 邮编：
-` <pn-zip>621101</pn-zip>
+` <pn-zip>621101</pn-zip> `
 
 默认：
-` <pn>549866574321646216546</pn>
+` <pn>549866574321646216546</pn> `
 
 ## 需要注意的问题！
 np.js 只针对数字在 web 页面中的数字显示效果，在不影响原内容的情况下增强可读性，默认将数字作为字符串进行处理。不适用涉及运算对精度有严格要求的场景。
