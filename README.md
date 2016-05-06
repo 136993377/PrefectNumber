@@ -1,6 +1,6 @@
 # PrefectNumber pn.js
-## What is PrefectNumber(pn.js)?
-## pn.js 是个啥子东西？
+## What is PrefectNumber(pn.js)?   pn.js 是个啥子东西？  
+
 The pn.js is a javascript frame,that make sure the readability of number.  
 pn.js 是一个保证各种数字易读性的JS框架。  
 
@@ -10,8 +10,13 @@ If you compose a phone number as "13655558888" np.js can auto format to "135 666
 
 
 
+## What formats are supported by number?    支持哪些格式的数字？
 
-### For example :
+中国大陆的手机号、座机号、身份证号码
+
+## How to use it   这东西，咋个用？
+
+
 
 
 
