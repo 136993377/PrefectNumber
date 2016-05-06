@@ -51,7 +51,7 @@ If you compose a phone number as "13655558888" np.js can auto format to "135 666
 代码：` <pn>549866574321646216546</pn> `  
 效果：5498 6657 4321 6462 1654 6  
 
-## 需要注意的问题！
+## Attention please！ 请注意！
 NP.js just for number display on the Web page, without affecting the original content, the number default as a string for format. Scenes involving the operation has strict compute and accuracy shall not Support.  
 
 np.js 只针对数字在 web 页面中的数字显示效果，在不影响原内容的情况下增强可读性，默认将数字作为字符串进行处理。不适用涉及运算对精度有严格要求的场景。
