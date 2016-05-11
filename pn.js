@@ -2,7 +2,7 @@
 window.onload = function() {
     //Add style to page
     var pnStyle = document.createElement("style");
-    pnStyle.innerHTML = 'pn-phone-zh-cn sn:after,pn-identification-zh-cn sn:after,pn sn:after{content: " ";}pn-math sn:after,pn-rmb sn:after{content: ",";}pn-rmb:before{content: "￥ ";}pn-dollar:before{content: "$ ";}';
+    pnStyle.innerHTML = 'pn-phone-zh-cn sn:after,pn-identification-zh-cn sn:after,pn sn:after{content: " ";}pn-math sn:after,pn-rmb sn:after,pn-dollar sn:after{content: ",";}pn-rmb:before{content: "￥ ";}pn-dollar:before{content: "$ ";}';
     document.getElementsByTagName('head')[0].appendChild(pnStyle);
     // Main
 
@@ -21,16 +21,66 @@ window.onload = function() {
     oSource.pnDefault && formatDefault(oSource.pnDefault);
     oSource.pnPhoneZhCn && formatPhoneNumber(oSource.pnPhoneZhCn);
     oSource.pnIdentificationZhCn && formatIdentificationZhCn(oSource.pnIdentificationZhCn);
-    // oSource.pnRmb && formatRmb(oSource.pnRmb);
-    // oSource.pnDollar && formatDollar(oSource.pnDollar);
+    oSource.pnRmb && formatMoney(oSource.pnRmb);
+    oSource.pnDollar && formatMoney(oSource.pnDollar);
     // oSource.pnZip && formatZip(oSource.pnZip);
     // oSource.pnMath && formatMath(oSource.pnMath);
 
 
     //formatRmb
-    function formatRmb(argument) {
-        /* body... */
-    }
+    function formatMoney(obj) {
+        for (var i = obj.length - 1; i >= 0; i--) {
+            var _index = i;
+            var newNum = [];
+            newNum[_index] = obj[_index].innerHTML.split('.'); //切成整数和小数两个部分
+            var integer = [];
+
+            newNum[_index][0] = newNum[_index][0].replace(/\D*/g, ''); //去除多余字符
+
+            var nL = [];
+            nL[_index] = newNum[_index][0].length; //整数部分长度
+
+            //断数
+            var nLi = [];
+            nLi[_index] = Math.ceil(nL[_index] / 3) - 1;
+
+            //第一段角标
+            var beforI = [];
+            beforI[_index] = nL[_index] - nLi[_index] * 3;
+
+            //获取第一段
+            var befor = [];
+            befor[_index] = newNum[_index][0].substring(0, beforI[_index]);
+
+
+            //剩下的部分，初始化
+            var after = [];
+            after[_index] = "";
+
+            for (var n = 1; n < nLi[_index] + 1; n++) {
+
+                after[_index] += "<sn></sn>";
+                after[_index] += newNum[_index][0].substring(beforI[_index], beforI[_index] + 3);
+                beforI[_index] += 3; //计算下一步的角标
+
+            };
+
+            integer[_index] = befor[_index] + after[_index]; //合并整数部分
+
+            if (newNum[_index][1]) {
+                if (newNum[_index][1].length == 1) {
+                    newNum[_index][1] += "0";
+                } else if (newNum[_index][1].length > 2) {
+                    newNum[_index][1] = newNum[_index][1].substring(0, 2);
+                };
+            } else {
+                newNum[_index][1] = "00";
+            };
+
+            obj[_index].innerHTML = integer[_index] + "." + newNum[_index][1]; //整数部分和小数部分合并输出
+
+        };
+    };
 
     //formatDefault
     function formatDefault(obj) {
